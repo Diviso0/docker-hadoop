@@ -21,6 +21,8 @@ services:
     restart: always
     volumes:
       - hadoop_datanode:/hadoop/dfs/data
+    ports:
+      - 9864:9864
     environment:
       SERVICE_PRECONDITION: "namenode:9870"
     env_file:
